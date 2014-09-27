@@ -70,7 +70,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftGraffiti/ViewController.swift"
@@ -81,6 +81,50 @@
             endingLineNumber = "17"
             landmarkName = "ViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftGraffiti.ViewController.init (SwiftGraffiti.ViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; SwiftGraffiti.ViewController"
+                  moduleName = "SwiftGraffiti"
+                  urlString = "file:///Users/ecchilds/Development/Swift/SwiftGraffiti/SwiftGraffiti/SwiftGraffiti/ViewController.swift"
+                  timestampString = "433551782.287754"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftGraffiti.ViewController.init (SwiftGraffiti.ViewController.Type)() -&gt; SwiftGraffiti.ViewController"
+                  moduleName = "SwiftGraffiti"
+                  urlString = "file:///Users/ecchilds/Development/Swift/SwiftGraffiti/SwiftGraffiti/SwiftGraffiti/ViewController.swift"
+                  timestampString = "433551782.287888"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftGraffiti.ViewController.init (SwiftGraffiti.ViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; SwiftGraffiti.ViewController"
+                  moduleName = "SwiftGraffiti"
+                  urlString = "file:///Users/ecchilds/Development/Swift/SwiftGraffiti/SwiftGraffiti/SwiftGraffiti/ViewController.swift"
+                  timestampString = "433551782.288027"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "74">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -113,6 +157,22 @@
             endingLineNumber = "11"
             landmarkName = "Tag"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftGraffiti/ViewController.swift"
+            timestampString = "433551373.824153"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
