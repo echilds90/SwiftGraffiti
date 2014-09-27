@@ -14,6 +14,7 @@
 		09C432EE19D740AF00CA2B3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09C432ED19D740AF00CA2B3F /* Images.xcassets */; };
 		09C432F119D740AF00CA2B3F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C432EF19D740AF00CA2B3F /* LaunchScreen.xib */; };
 		09C432FD19D740AF00CA2B3F /* SwiftGraffitiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C432FC19D740AF00CA2B3F /* SwiftGraffitiTests.swift */; };
+		09FEB09019D7759100CD3961 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FEB08F19D7759100CD3961 /* Tag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		09C432F619D740AF00CA2B3F /* SwiftGraffitiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGraffitiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C432FB19D740AF00CA2B3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C432FC19D740AF00CA2B3F /* SwiftGraffitiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGraffitiTests.swift; sourceTree = "<group>"; };
+		09FEB08F19D7759100CD3961 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		09C432D519D740AF00CA2B3F = {
 			isa = PBXGroup;
 			children = (
+				09FEB08F19D7759100CD3961 /* Tag.swift */,
 				09C432E019D740AF00CA2B3F /* SwiftGraffiti */,
 				09C432F919D740AF00CA2B3F /* SwiftGraffitiTests */,
 				09C432DF19D740AF00CA2B3F /* Products */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09FEB09019D7759100CD3961 /* Tag.swift in Sources */,
 				09C432E919D740AF00CA2B3F /* ViewController.swift in Sources */,
 				09C432E419D740AF00CA2B3F /* AppDelegate.swift in Sources */,
 				09C432E719D740AF00CA2B3F /* SwiftGraffiti.xcdatamodeld in Sources */,
@@ -409,6 +413,7 @@
 				09C4330219D740AF00CA2B3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09C4330319D740AF00CA2B3F /* Build configuration list for PBXNativeTarget "SwiftGraffitiTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				09C4330519D740AF00CA2B3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

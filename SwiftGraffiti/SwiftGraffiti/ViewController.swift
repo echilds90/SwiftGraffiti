@@ -13,22 +13,32 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var locManager: CLLocationManager!
+    var currentLocation: CLLocation!
+    
+    let location = CLLocationCoordinate2D(
+        latitude: 37.7833,
+        longitude: -122.4167
+    )
+    
+    
     @IBOutlet weak var mapView: MKMapView!
+    
+    func locationManager(_manager: CLLocationManager!,
+        didUpdateLocations locations: [AnyObject]!) {
+            currentLocation = locManager.location
+    }
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 1
-//        let location = CLLocationCoordinate2D(
-//            latitude: 37.7833,
-//            longitude: -122.4167
-//        )
-        // 2
+
         let span = MKCoordinateSpanMake(0.05, 0.05)
        
         //3
 
         locManager = CLLocationManager()
+        locManager.delegate = self
         locManager!.requestWhenInUseAuthorization()
+        locManager.startUpdatingLocation()
         mapView.showsUserLocation = true
         if  let localLocation = locManager.location {
             
@@ -48,10 +58,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             println("The location is sad :(")
         }
         
-
-        
-
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,6 +70,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
+
+    @IBAction func addPin(sender: AnyObject) {
+        
+        if let localLocation = currentLocation
+        {
+            let annotation = MKPointAnnotation()
+            annotation.setCoordinate(localLocation.coordinate)
+            annotation.title = "New Pin"
+            annotation.subtitle = "Heck Yes"
+            mapView.addAnnotation(annotation)
+        }
+        else {
+            println("Sad face :(");
+        }
+        
+        
+    }
 
     
 
