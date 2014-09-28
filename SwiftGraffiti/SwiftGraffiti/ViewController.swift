@@ -14,6 +14,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var locManager: CLLocationManager!
     var currentLocation: CLLocation!
+    var newTags: [Tag]!
+    //var tagRepository: TagRepository!
     
     let location = CLLocationCoordinate2D(
         latitude: 37.7833,
@@ -30,10 +32,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //TODO: lack of Dependecy Injection makes EliIan cry
+        newTags = TagRepository().loadTags()
+        
+        
         let span = MKCoordinateSpanMake(0.05, 0.05)
-       
-        //3
+
 
         locManager = CLLocationManager()
         locManager.delegate = self
@@ -52,7 +57,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             annotation.title = "Big Ben"
             annotation.subtitle = "London"
             mapView.addAnnotation(annotation)
-            
             
         } else {
             println("The location is sad :(")
@@ -82,6 +86,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             annotation.title = "New Pin"
             annotation.subtitle = "Heck Yes"
             mapView.addAnnotation(annotation)
+            newTags.append(Tag(description: "New Pin Heck Yes", location: localLocation))
+            TagRepository().saveTags(newTags)
         }
         else {
             println("Sad face :(");

@@ -12,11 +12,16 @@ class Tag
 {
     var description: String
     var location: CLLocation
-    var tagRepository: TagRepository
+    
     init(description: String, location: CLLocation) {
         self.description = description
         self.location = location
-        self.tagRepository = TagRepository();
+    }
+    
+    func toDictionary() -> NSDictionary {
+        var dictionary = [ "description": self.description, "location":self.location]
+        
+        return dictionary as NSDictionary
     }
     
 }
