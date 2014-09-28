@@ -15,6 +15,7 @@
 		09C432F119D740AF00CA2B3F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C432EF19D740AF00CA2B3F /* LaunchScreen.xib */; };
 		09C432FD19D740AF00CA2B3F /* SwiftGraffitiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C432FC19D740AF00CA2B3F /* SwiftGraffitiTests.swift */; };
 		09FEB09019D7759100CD3961 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FEB08F19D7759100CD3961 /* Tag.swift */; };
+		3C301E7B19D77FA100E23E98 /* TagRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C301E7A19D77FA100E23E98 /* TagRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		09C432FB19D740AF00CA2B3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C432FC19D740AF00CA2B3F /* SwiftGraffitiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGraffitiTests.swift; sourceTree = "<group>"; };
 		09FEB08F19D7759100CD3961 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		3C301E7A19D77FA100E23E98 /* TagRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		09C432D519D740AF00CA2B3F = {
 			isa = PBXGroup;
 			children = (
+				3C301E7A19D77FA100E23E98 /* TagRepository.swift */,
 				09FEB08F19D7759100CD3961 /* Tag.swift */,
 				09C432E019D740AF00CA2B3F /* SwiftGraffiti */,
 				09C432F919D740AF00CA2B3F /* SwiftGraffitiTests */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C301E7B19D77FA100E23E98 /* TagRepository.swift in Sources */,
 				09FEB09019D7759100CD3961 /* Tag.swift in Sources */,
 				09C432E919D740AF00CA2B3F /* ViewController.swift in Sources */,
 				09C432E419D740AF00CA2B3F /* AppDelegate.swift in Sources */,

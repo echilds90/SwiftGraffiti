@@ -12,8 +12,11 @@ class Tag
 {
     var description: String
     var location: CLLocation
+    var tagRepository: TagRepository
     init(description: String, location: CLLocation) {
         self.description = description
         self.location = location
+        self.tagRepository = TagRepository();
     }
+    
 }
