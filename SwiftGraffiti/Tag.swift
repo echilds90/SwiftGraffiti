@@ -18,9 +18,15 @@ class Tag
         self.location = location
     }
     
+    init(info: NSDictionary) {
+        self.description = info.objectForKey("description") as NSString
+        var longitude = info.objectForKey("longitude") as Double
+        var latitude = info.objectForKey("latitude") as Double
+        self.location = CLLocation(latitude: latitude, longitude: longitude)
+    }
+    
     func toDictionary() -> NSDictionary {
-        var dictionary = [ "description": self.description, "location":self.location]
-        
+        var dictionary = [ "description": self.description, "latitude":self.location.coordinate.latitude, "longitude":self.location.coordinate.longitude]
         return dictionary as NSDictionary
     }
     
