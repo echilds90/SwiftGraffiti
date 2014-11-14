@@ -35,7 +35,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         //TODO: lack of Dependecy Injection makes EliIan cry
         newTags = TagRepository().loadTags()
-        
+        addPinsToMap(newTags)
         
         let span = MKCoordinateSpanMake(0.05, 0.05)
 
@@ -51,12 +51,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             mapView.setRegion(region, animated: true)
             
-            
-            let annotation = MKPointAnnotation()
-            annotation.setCoordinate(localLocation.coordinate)
-            annotation.title = "Big Ben"
-            annotation.subtitle = "London"
-            mapView.addAnnotation(annotation)
             
         } else {
             println("The location is sad :(")
@@ -75,17 +69,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             mapView.showsUserLocation = true
         }
     }
+    
+    func addPinsToMap(pins: Array<Tag>)
+    {
+        for pin in pins {
+            addPinToMap(pin.location.coordinate, title: pin.description, subtitle: "Heck Yes")
+        }
+    }
+    
+    func addPinToMap(coordinate: CLLocationCoordinate2D, title: String, subtitle: String) {
+        let annotation = MKPointAnnotation()
+        annotation.setCoordinate(coordinate)
+        annotation.title = "New Pin"
+        annotation.subtitle = "Heck Yes"
+        mapView.addAnnotation(annotation)
+    }
 
 
     @IBAction func addPin(sender: AnyObject) {
         
         if let localLocation = currentLocation
         {
-            let annotation = MKPointAnnotation()
-            annotation.setCoordinate(localLocation.coordinate)
-            annotation.title = "New Pin"
-            annotation.subtitle = "Heck Yes"
-            mapView.addAnnotation(annotation)
+            addPinToMap(currentLocation.coordinate, title: "New Pin", subtitle: "Heck Yes")
             newTags.append(Tag(description: "New Pin Heck Yes", location: localLocation))
             TagRepository().saveTags(newTags)
         }
