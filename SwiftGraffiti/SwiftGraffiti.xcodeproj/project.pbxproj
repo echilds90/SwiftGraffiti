@@ -16,6 +16,7 @@
 		09C432FD19D740AF00CA2B3F /* SwiftGraffitiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C432FC19D740AF00CA2B3F /* SwiftGraffitiTests.swift */; };
 		09FEB09019D7759100CD3961 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FEB08F19D7759100CD3961 /* Tag.swift */; };
 		3C301E7B19D77FA100E23E98 /* TagRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C301E7A19D77FA100E23E98 /* TagRepository.swift */; };
+		6EEA7C011A15ADA8003360A1 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA7C001A15ADA8003360A1 /* SearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		09C432FC19D740AF00CA2B3F /* SwiftGraffitiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGraffitiTests.swift; sourceTree = "<group>"; };
 		09FEB08F19D7759100CD3961 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		3C301E7A19D77FA100E23E98 /* TagRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagRepository.swift; sourceTree = "<group>"; };
+		6EEA7C001A15ADA8003360A1 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				09C432EF19D740AF00CA2B3F /* LaunchScreen.xib */,
 				09C432E519D740AF00CA2B3F /* SwiftGraffiti.xcdatamodeld */,
 				09C432E119D740AF00CA2B3F /* Supporting Files */,
+				6EEA7C001A15ADA8003360A1 /* SearchController.swift */,
 			);
 			path = SwiftGraffiti;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C301E7B19D77FA100E23E98 /* TagRepository.swift in Sources */,
+				6EEA7C011A15ADA8003360A1 /* SearchController.swift in Sources */,
 				09FEB09019D7759100CD3961 /* Tag.swift in Sources */,
 				09C432E919D740AF00CA2B3F /* ViewController.swift in Sources */,
 				09C432E419D740AF00CA2B3F /* AppDelegate.swift in Sources */,

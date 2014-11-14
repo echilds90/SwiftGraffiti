@@ -84,7 +84,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func addPinToMap(coordinate: CLLocationCoordinate2D, title: String, subtitle: String) {
         let annotation = MKPointAnnotation()
         annotation.setCoordinate(coordinate)
-        annotation.title = "New Pin"
+        annotation.title = title
         annotation.subtitle = "Heck Yes"
         mapView.addAnnotation(annotation)
     }
@@ -94,8 +94,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         if let localLocation = currentLocation
         {
-            addPinToMap(currentLocation.coordinate, title: "New Pin", subtitle: "Heck Yes")
-            newTags.append(Tag(description: "New Pin Heck Yes", location: localLocation))
+            addPinToMap(currentLocation.coordinate, title: tagName.text, subtitle: "Heck Yes")
+            newTags.append(Tag(description: tagName.text, location: localLocation))
+            tagName.text = ""
             TagRepository().saveTags(newTags)
         }
         else {
