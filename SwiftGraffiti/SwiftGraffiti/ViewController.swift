@@ -33,33 +33,44 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //TODO: lack of Dependecy Injection makes EliIan cry
-        newTags = TagRepository().loadTags()
-        addPinsToMap(newTags)
+        loadSavedTags()
+        doMapSetUp()
+        loadMapViewBasedOnLocation()
         
-        let span = MKCoordinateSpanMake(0.05, 0.05)
-
-
+    }
+    
+    func doMapSetUp(){
         locManager = CLLocationManager()
         locManager.delegate = self
         locManager!.requestWhenInUseAuthorization()
         locManager.startUpdatingLocation()
         mapView.showsUserLocation = true
+    }
+    
+    func loadSavedTags(){
+        //TODO: lack of Dependecy Injection makes EliIan cry
+        newTags = TagRepository().loadTags()
+        addPinsToMap(newTags)
+    }
+
+    func loadMapViewBasedOnLocation(){
+        
+        let span = MKCoordinateSpanMake(0.1, 0.1)
+        
         if  let localLocation = locManager.location {
             
             let region = MKCoordinateRegion(center: localLocation.coordinate, span: span)
             
             mapView.setRegion(region, animated: true)
             
-            
         } else {
             println("The location is sad :(")
         }
-        
     }
-
+    
     @IBOutlet weak var tagName: UITextField!
 
+    //TODO: Rename this Eliza is confused
     @IBAction func forceShitToPleaseWork(sender: AnyObject) {
         
     }
