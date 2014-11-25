@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, SearchControllerDelegate {
     
     var locManager: CLLocationManager!
     var currentLocation: CLLocation!
@@ -21,8 +21,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         latitude: 37.7833,
         longitude: -122.4167
     )
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "searchPullOut"{
+            print("WASSUP");
+        }
+    }
+    func mySearchDidFinish(controller: SearchController, text: String) {
+        searchStuff.text = text
+        controller.navigationController?.popViewControllerAnimated(true)
+    }
     
-    
+    @IBOutlet weak var searchStuff: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
     func locationManager(_manager: CLLocationManager!,
@@ -36,8 +45,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         loadSavedTags()
         doMapSetUp()
         loadMapViewBasedOnLocation()
+        searchStuff.text = mySearchText
         
     }
+    var mySearchText = "";
     
     func doMapSetUp(){
         locManager = CLLocationManager()

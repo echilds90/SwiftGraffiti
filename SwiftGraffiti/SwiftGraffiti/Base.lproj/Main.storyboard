@@ -16,9 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fpG-XJ-dvq">
-                                <rect key="frame" x="0.0" y="28" width="600" height="438"/>
-                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aU9-r5-Pw1">
                                 <rect key="frame" x="75" y="550" width="183" height="30"/>
                                 <state key="normal" title="Add Pin at current location">
@@ -42,21 +39,31 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="kWi-64-Xlf" kind="show" id="7T3-Fr-IhR"/>
+                                    <segue destination="Iri-YI-mbd" kind="show" identifier="searchPullOut" id="IEy-O9-sCP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search Stuff" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4r7-hT-jUz">
+                                <rect key="frame" x="313" y="482" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fpG-XJ-dvq">
+                                <rect key="frame" x="5" y="6" width="600" height="438"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="7u9-1K-8Nl"/>
                     <connections>
                         <outlet property="MapView" destination="fpG-XJ-dvq" id="5u0-Ua-Mmj"/>
+                        <outlet property="searchStuff" destination="4r7-hT-jUz" id="HFB-Kk-GAv"/>
                         <outlet property="tagName" destination="7pc-er-7OY" id="HuR-wj-xXc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="650" y="23"/>
+            <point key="canvasLocation" x="1322" y="291"/>
         </scene>
         <!--Search Controller-->
         <scene sceneID="v5X-5q-dId">
@@ -77,6 +84,7 @@
                                 </state>
                                 <connections>
                                     <action selector="searchButtonPressed:" destination="Iri-YI-mbd" eventType="touchDown" id="Q49-5D-far"/>
+                                    <segue destination="vXZ-lx-hvc" kind="show" identifier="searchPullIn" id="bVt-IG-nil"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bld-au-G2N">
@@ -97,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HGx-SG-3EB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2186" y="47"/>
+            <point key="canvasLocation" x="2032" y="173"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3jB-dC-1ES">
@@ -115,25 +123,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEQ-HS-6X4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-103" y="34"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="xpo-6z-73e">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kWi-64-Xlf" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tpr-0K-TWf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Iri-YI-mbd" kind="relationship" relationship="rootViewController" id="GB5-mj-tfk"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1wJ-M1-5U6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1374" y="47"/>
+            <point key="canvasLocation" x="1361" y="-480"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bVt-IG-nil"/>
+    </inferredMetricsTieBreakers>
 </document>
