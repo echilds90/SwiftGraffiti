@@ -33,6 +33,13 @@ class TagRepository {
         return result
     }
     
+    func searchTags(searchText: String) -> [Tag] {
+        var tags = loadTags();
+        return tags.filter {
+            $0.description.rangeOfString(searchText) != nil
+        }
+    }
+    
     func convertTagsToData(tags:[Tag]) -> NSDictionary
     {
         var data = Dictionary<String, [NSDictionary]>()

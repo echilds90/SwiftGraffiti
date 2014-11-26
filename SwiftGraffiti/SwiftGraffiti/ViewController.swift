@@ -38,14 +38,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SearchControl
         didUpdateLocations locations: [AnyObject]!) {
             currentLocation = locManager.location
     }
-   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        loadSavedTags()
+        searchStuff.text = mySearchText
+        loadSavedTags(mySearchText)
         doMapSetUp()
         loadMapViewBasedOnLocation()
-        searchStuff.text = mySearchText
         
     }
     var mySearchText = "";
@@ -58,9 +58,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SearchControl
         mapView.showsUserLocation = true
     }
     
-    func loadSavedTags(){
+    func loadSavedTags(searchText: String){
         //TODO: lack of Dependecy Injection makes EliIan cry
-        newTags = TagRepository().loadTags()
+        var newTags: [Tag];
+        if(searchText != "")
+        {
+            newTags = TagRepository().searchTags(searchText);
+        }
+        else {
+            newTags = TagRepository().loadTags();
+        }
         addPinsToMap(newTags)
     }
 
