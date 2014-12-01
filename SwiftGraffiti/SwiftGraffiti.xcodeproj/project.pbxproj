@@ -16,6 +16,10 @@
 		09C432FD19D740AF00CA2B3F /* SwiftGraffitiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C432FC19D740AF00CA2B3F /* SwiftGraffitiTests.swift */; };
 		09FEB09019D7759100CD3961 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FEB08F19D7759100CD3961 /* Tag.swift */; };
 		3C301E7B19D77FA100E23E98 /* TagRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C301E7A19D77FA100E23E98 /* TagRepository.swift */; };
+		6E65BC071A255438005B0153 /* NewTagController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E65BC061A255438005B0153 /* NewTagController.swift */; };
+		6E65BC091A269386005B0153 /* NewMapPinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E65BC081A269386005B0153 /* NewMapPinController.swift */; };
+		6E65BC0B1A269568005B0153 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E65BC0A1A269568005B0153 /* MapKit.framework */; };
+		6E65BC0D1A26956F005B0153 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E65BC0C1A26956F005B0153 /* CoreLocation.framework */; };
 		6EEA7C011A15ADA8003360A1 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA7C001A15ADA8003360A1 /* SearchController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +47,10 @@
 		09C432FC19D740AF00CA2B3F /* SwiftGraffitiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGraffitiTests.swift; sourceTree = "<group>"; };
 		09FEB08F19D7759100CD3961 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		3C301E7A19D77FA100E23E98 /* TagRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagRepository.swift; sourceTree = "<group>"; };
+		6E65BC061A255438005B0153 /* NewTagController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTagController.swift; sourceTree = "<group>"; };
+		6E65BC081A269386005B0153 /* NewMapPinController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMapPinController.swift; sourceTree = "<group>"; };
+		6E65BC0A1A269568005B0153 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6E65BC0C1A26956F005B0153 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6EEA7C001A15ADA8003360A1 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E65BC0D1A26956F005B0153 /* CoreLocation.framework in Frameworks */,
+				6E65BC0B1A269568005B0153 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +77,8 @@
 		09C432D519D740AF00CA2B3F = {
 			isa = PBXGroup;
 			children = (
+				6E65BC0C1A26956F005B0153 /* CoreLocation.framework */,
+				6E65BC0A1A269568005B0153 /* MapKit.framework */,
 				3C301E7A19D77FA100E23E98 /* TagRepository.swift */,
 				09FEB08F19D7759100CD3961 /* Tag.swift */,
 				09C432E019D740AF00CA2B3F /* SwiftGraffiti */,
@@ -90,11 +102,13 @@
 				09C432E319D740AF00CA2B3F /* AppDelegate.swift */,
 				09C432E819D740AF00CA2B3F /* ViewController.swift */,
 				09C432EA19D740AF00CA2B3F /* Main.storyboard */,
+				6E65BC061A255438005B0153 /* NewTagController.swift */,
 				09C432ED19D740AF00CA2B3F /* Images.xcassets */,
 				09C432EF19D740AF00CA2B3F /* LaunchScreen.xib */,
 				09C432E519D740AF00CA2B3F /* SwiftGraffiti.xcdatamodeld */,
 				09C432E119D740AF00CA2B3F /* Supporting Files */,
 				6EEA7C001A15ADA8003360A1 /* SearchController.swift */,
+				6E65BC081A269386005B0153 /* NewMapPinController.swift */,
 			);
 			path = SwiftGraffiti;
 			sourceTree = "<group>";
@@ -227,9 +241,11 @@
 				3C301E7B19D77FA100E23E98 /* TagRepository.swift in Sources */,
 				6EEA7C011A15ADA8003360A1 /* SearchController.swift in Sources */,
 				09FEB09019D7759100CD3961 /* Tag.swift in Sources */,
+				6E65BC071A255438005B0153 /* NewTagController.swift in Sources */,
 				09C432E919D740AF00CA2B3F /* ViewController.swift in Sources */,
 				09C432E419D740AF00CA2B3F /* AppDelegate.swift in Sources */,
 				09C432E719D740AF00CA2B3F /* SwiftGraffiti.xcdatamodeld in Sources */,
+				6E65BC091A269386005B0153 /* NewMapPinController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate, SearchControllerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, SearchControllerDelegate, NewTagControllerDelegate {
     
     var locManager: CLLocationManager!
     var currentLocation: CLLocation!
@@ -25,6 +25,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SearchControl
         if segue.identifier == "searchPullOut"{
             print("WASSUP");
         }
+        if(segue.identifier == "sentToAddPin") {
+            let vc = segue.destinationViewController as NewTagController
+            vc.delegate = self;
+        }
+    }
+    
+    func myAddingOfTagDidFinish(controller:NewTagController,image:UIImageView) {
+        controller.navigationController?.popViewControllerAnimated(true);
     }
     func mySearchDidFinish(controller: SearchController, text: String) {
         searchStuff.text = text
