@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312" y="221"/>
+            <point key="canvasLocation" x="1296" y="121"/>
         </scene>
         <!--New Tag Controller-->
         <scene sceneID="j3U-Na-AhE">
@@ -150,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T5m-7g-bpk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337" y="911"/>
+            <point key="canvasLocation" x="1881" y="879"/>
         </scene>
         <!--New Map Pin Controller-->
         <scene sceneID="MU5-aZ-uTH">
@@ -202,7 +202,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2022" y="896"/>
+            <point key="canvasLocation" x="2598" y="200"/>
         </scene>
         <!--Search Controller-->
         <scene sceneID="v5X-5q-dId">
@@ -244,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HGx-SG-3EB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2022" y="103"/>
+            <point key="canvasLocation" x="596" y="873"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3jB-dC-1ES">
