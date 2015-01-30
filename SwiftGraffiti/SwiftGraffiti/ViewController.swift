@@ -68,7 +68,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SearchControl
     
     func loadSavedTags(searchText: String){
         //TODO: lack of Dependecy Injection makes EliIan cry
-        var newTags: [Tag];
         if(searchText != "")
         {
             newTags = TagRepository().searchTags(searchText);
