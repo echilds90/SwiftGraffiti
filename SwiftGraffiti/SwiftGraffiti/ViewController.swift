@@ -47,6 +47,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SearchControl
             currentLocation = locManager.location
     }
     
+    @IBAction func centerCurrentLocation(sender: UIButton) {
+        //This seems to center on something, but it does put it in the center of the view for some reason
+        if let localLocation = currentLocation
+        {
+            let center = CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+            
+            self.mapView.setRegion(region, animated: true)
+        }
+        else {
+            println("Center Map Sad face :(");
+        }
+        
+        
+    
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +80,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SearchControl
         locManager!.requestWhenInUseAuthorization()
         locManager.startUpdatingLocation()
         mapView.showsUserLocation = true
+        //This seems to zoom in and around the main tags of a map
+        mapView.showAnnotations(self.mapView.annotations, animated: true)
     }
     
     func loadSavedTags(searchText: String){
